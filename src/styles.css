@@ -1,0 +1,171 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73e7e, #23a6d5, #25d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.order {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.5em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.cardnotify {
+  position: absolute;
+  left: 20%;
+  transform: translate(-50%);
+}
+#pepper,
+#gluten {
+  appearance: none;
+  width: 30px;
+  height: 8px;
+  background: #999;
+  border-radius: 5px;
+  position: relative;
+  outline: 0;
+  cursor: pointer;
+}
+
+#pepper,
+#gluten:checked {
+  background: #008000;
+}
+#pepper:before,
+#pepper:after {
+  position: absolute;
+  content: "";
+  transition: all 0.25s;
+}
+#pepper:before {
+  width: 28px;
+  height: 28px;
+  background: #999;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  top: -98%;
+  left: 0;
+  transform: translate(-50%);
+}
+#pepper:after {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  top: 80%;
+  left: -9px;
+  transform: scale(1) translateY(-50%);
+  transform-origin: 50% 50%;
+}
+#pepper:checked:before {
+  left: calc(100% - 5px);
+  background: #008000;
+}
+#pepper:checked:after {
+  left: 75px;
+  transform: scale(0);
+}
+#gluten:before,
+#gluten:after {
+  position: absolute;
+  content: "";
+  transition: all 0.25s;
+}
+#gluten:before {
+  width: 28px;
+  height: 28px;
+  background: #999;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  top: -98%;
+  left: 0;
+  transform: translate(-50%);
+}
+#gluten:after {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  top: 80%;
+  left: -9px;
+  transform: scale(1) translateY(-50%);
+  transform-origin: 50% 50%;
+}
+#gluten:checked:before {
+  left: calc(100% - 5px);
+  background: #008000;
+}
+#gluten:checked:after {
+  left: 75px;
+  transform: scale(0);
+}
+
+.myname {
+  padding-right: 100px;
+}
+.myname,
+input,
+#instruction {
+  font-size: 0.9em;
+}
+.mysize {
+  padding-left: 20px;
+}
+.myquantity {
+  padding-right: 24px;
+}
+.myquantity,
+input {
+  text-align: center;
+}
+input {
+  height: 30px;
+  width: 350px;
+}
+select,
+option {
+  width: 350px;
+  height: 30px;
+  font-size: 0.8em;
+  text-align: center;
+}
+option {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mysubmit {
+  width: 100px;
+  font-size: 0.8em;
+}
